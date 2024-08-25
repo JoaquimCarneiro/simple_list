@@ -71,13 +71,14 @@ void List::delete_item(){
         for (unsigned int i = 0; i < list.size(); i++){
             cout << i << " - " << list[i] << endl;
         }
-                
+        cin >> item;
+        list.erase(list.begin() + item);
     }else{
         cout << "The list is empty\n";
     }
     
 
-    cin >> item;
+    //cin >> item;
     //list.erase(item);
 
     print_menu();
