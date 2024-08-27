@@ -1,5 +1,4 @@
 /obj
 /.vscode
 /SimpleList
-/list.d
-/main.d
+*.d
