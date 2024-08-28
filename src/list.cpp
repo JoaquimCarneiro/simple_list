@@ -1,7 +1,7 @@
 #include "include/list.h"
 
 void List::print_menu(){
-    system("clear");
+    //system("clear");
     int choice;
     cout << "************************************\n";
     cout << "1 - Print list\n";
@@ -82,4 +82,23 @@ void List::delete_item(){
     //list.erase(item);
 
     print_menu();
+}
+
+void List::find_userList(){
+    bool userFound = false;
+
+    cout << "************************************\n";
+    cout << "************* Find User ************\n";
+    cout << "Welcome" << name << "\n";
+
+    for (unsigned int user_index = 0 ; user_index < mainList.size(); user_index++){
+        cout << mainList[user_index][0] << "\n";
+        if(mainList[user_index][0] == name){
+            cout << "user has been found: " << mainList[user_index][0] << endl;
+            list = mainList[user_index];
+            userFound = true;
+            break;
+        }
+    }
+    
 }
